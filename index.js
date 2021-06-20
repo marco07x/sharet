@@ -11,7 +11,7 @@ const opcionesCors = {
 }
 //Habilitar cors
 app.use( cors(opcionesCors) );
-
+app.options("*", cors())
 //Conectar a la base de datos 
 conectarDB();
 
