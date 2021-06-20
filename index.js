@@ -10,8 +10,7 @@ const opcionesCors = {
     origin: process.env.FRONTEND_URL
 }
 //Habilitar cors
-app.use( cors(opcionesCors) );
-app.options("*", cors())
+app.use( cors({opcionesCors, origin: true}) );
 //Conectar a la base de datos 
 conectarDB();
 
